@@ -1,0 +1,9 @@
+FROM mcr.microsoft.com/windows/servercore:1809
+COPY ["helpfiles/dotnet-install.ps1", "dotnet/dotnet-install.ps1"]	
+RUN powershell C:\dotnet\dotnet-install.ps1 -Runtime dotnet -Version 5.0.6
+RUN mkdir gams
+RUN cd gams &&\
+	curl -O https://d37drm4t2jghv5.cloudfront.net/distributions/35.1.0/windows/windows_x64_64.exe
+RUN cd gams &&\
+	windows_x64_64.exe /SP- /SILENT
+RUN set PATH=%PATH%;C:\gams\35
