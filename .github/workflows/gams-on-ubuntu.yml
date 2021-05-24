@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: GAMS on Ubuntu
 
 on:
   push:

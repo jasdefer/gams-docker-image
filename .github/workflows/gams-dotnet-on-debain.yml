@@ -1,4 +1,4 @@
-name: GAMS on Windows servercore
+name: GAMS and .NET on Debian
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: jasdefer/gams-on-windows-servercore
-        file: Dockerfiles/gams-on-windows-servercore
+        tags: jasdefer/gams-dotnet-on-debain
+        file: Dockerfiles/gams-dotnet-on-debain
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
