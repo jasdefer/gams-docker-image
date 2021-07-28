@@ -3,9 +3,9 @@ RUN apt-get update -y && apt-get install curl -y
 RUN cd ../ &&\
 	mkdir gams &&\
 	cd gams &&\
-	curl -O https://d37drm4t2jghv5.cloudfront.net/distributions/34.3.0/linux/linux_x64_64_sfx.exe
+	curl -O https://d37drm4t2jghv5.cloudfront.net/distributions/35.2.0/linux/linux_x64_64_sfx.exe
 RUN cd ../gams &&\
 	chmod 755 linux_x64_64_sfx.exe &&\
 	./linux_x64_64_sfx.exe &&\
 	rm linux_x64_64_sfx.exe
-ENV PATH=$PATH:/gams/gams34.3_linux_x64_64_sfx
+ENV PATH=$PATH:/gams/gams35.2_linux_x64_64_sfx
