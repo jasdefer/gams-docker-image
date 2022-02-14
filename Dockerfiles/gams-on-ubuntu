@@ -10,4 +10,5 @@ RUN chmod 755 /gams/linux_x64_64_sfx.exe
 RUN cd gams &&\
 	./linux_x64_64_sfx.exe
 RUN rm /gams/linux_x64_64_sfx.exe
+RUN rm /gams/gams38.1_linux_x64_64_sfx/docs -r
 RUN PATH=$PATH:/gams/gams38.1_linux_x64_64_sfx
